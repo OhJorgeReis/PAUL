@@ -1,0 +1,157 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cam,
+.cam__canvas,
+#camera--view,
+#camera--output {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#camera--view,
+#camera--sensor,
+#camera--output {
+  filter: FlipH;
+}
+.cam__triggerBtn {
+  background-color: black;
+  border-radius: 70%;
+  border: none;
+  padding: 5px;
+  position: fixed;
+  bottom: 30px;
+  left: calc(50% - 40px);
+  height: 70px;
+  width: 70px;
+}
+
+/* #camera--share {
+  display: none;
+} */
+
+/* #show-camera--share {
+  display: block;
+} */
+
+.cam__shareBtn {
+  background-color: black;
+  border-radius: 70%;
+  border: none;
+  padding: 5px;
+  position: fixed;
+  bottom: 350px;
+  left: calc(72%);
+  height: 70px;
+  width: 70px;
+}
+
+.info_after {
+  text-align: justify;
+  margin: 20px 0;
+  z-index: 999;
+  width: 70px;
+  color: rgb(0, 0, 0);
+  font-size: 9px;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  background-color: aliceblue;
+  position: fixed;
+  bottom: 410px;
+  margin-left: 10rem;
+  left: calc(50% - 100px);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+}
+
+.info_before {
+  width: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: aliceblue;
+  position: fixed;
+  left: calc(50% - 100px);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[hidden] {
+  display: none;
+}
+
+.cam__takenPreview {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: all 0.5s ease-in;
+  border: solid 3px white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+#scale-element {
+  display: block;
+  position: absolute;
+  max-width: 100%;
+  margin: 1rem auto;
+  touch-action: none;
+  max-height: 100vh;
+  margin-top: 180px;
+}
+
+#scale-element.reset {
+  transition: transform 0.3s ease-in-out;
+}
+
+.heading_selection {
+  grid-area: heading;
+  font-weight: normal;
+  align-self: start;
+  margin: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+  margin-top: 22px;
+  font-size: 26px;
+  position: fixed;
+  z-index: 999;
+}
+
+.info_before {
+  width: 90px;
+  color: rgb(0, 0, 0);
+  font-size: 9px;
+  border: none;
+  left: 10px;
+  bottom: 20px;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.go_back {
+  text-decoration: none;
+  color: #000;
+  margin-left: 1rem;
+}
+
+.heading_selection a {
+  text-decoration: none;
+  color: #000;
+}
